@@ -209,9 +209,13 @@ void parse_file ( char * filename,
       save_extension(s, line);
     }
     else if ( strncmp(line, "clear", strlen(line)) == 0 ) {
+      clear_matrix(pm);
     }
     else if ( strncmp(line, "quit", strlen(line)) == 0 ) {
       return;
+    }
+    else if ( strncmp(line, "#", sizeof(char)) == 0) {
+      printf("Comment\n");
     }
     else {
       printf("Invalid command\n");
