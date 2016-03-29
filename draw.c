@@ -31,7 +31,7 @@ void add_sphere( struct matrix * points,
   double x, y, z;
   struct matrix * s_points = new_matrix(4, 0);
   generate_sphere(s_points, cx, cy, r, step);
-  for (i = 0; i < s_points->cols; i++) {
+  for (i = 0; i < s_points->lastcol; i++) {
     x = s_points->m[0][i];
     y = s_points->m[1][i];
     z = s_points->m[2][i];
@@ -96,7 +96,7 @@ void add_torus( struct matrix * points,
   double x, y, z;
   struct matrix * t_points = new_matrix(4, 0);
   generate_torus(t_points, cx, cy, r1, r2, step);
-  for (i = 0; i < t_points->cols; i++) {
+  for (i = 0; i < t_points->lastcol; i++) {
     x = t_points->m[0][i];
     y = t_points->m[1][i];
     z = t_points->m[2][i];
